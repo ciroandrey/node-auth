@@ -1,0 +1,26 @@
+# Arquivos temporários
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Arquivos de build
+/build
+/dist
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Dependências de desenvolvimento
+.DS_Store
+Thumbs.db
+
+# Dependências do editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
