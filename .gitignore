@@ -24,3 +24,6 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw*
+
+# Dependências custom
+customConfig.js
