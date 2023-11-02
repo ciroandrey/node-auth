@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const config = require('../../customConfig');
+const config = require('../../customConfig'); //fora do git, crie o seu e coloque a string com seu database
 
 const connectDB = async () => {
   try {
