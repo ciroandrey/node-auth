@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userService = require('../services/userService');
+const { requireAdmin } = require('../middlewares/authMiddleware');
 
 /**
  * @swagger
@@ -93,8 +94,9 @@ router.put('/:id', async (req, res) => {
  *         description: Usuário não encontrado
  *       400:
  *         description: Erro ao excluir o usuário
+ * 
  */
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', requireAdmin, async (req, res) => {
   const userId = req.params.id;
   try {
     const deletedUser = await userService.deleteUser(userId);

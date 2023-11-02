@@ -10,8 +10,20 @@ const options = {
       description: 'Documentação da sua API',
     },
     components: {
-        schemas: schemas, 
+      schemas: schemas,
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
+      },
     },
+    security: [
+      {
+        bearerAuth: []
+      }
+    ]
   },
   apis: ['./src/routes/*.js'],
 };
